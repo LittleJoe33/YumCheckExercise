@@ -19,6 +19,9 @@ echo "${BASH_REMATCH[5]}"
 
 ##[[ "$RPM" =~ $regex ]]
 
+# FORMAT FOR REGEXP = vcg-iid-simulator-((VERSION)).el7.x86_64.rpm 
+# Comment to test GIT
+ 
 truncate -s 0 matches.txt
 truncate -s 0 nonMatches.txt
 
