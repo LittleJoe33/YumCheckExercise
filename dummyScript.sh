@@ -3,6 +3,22 @@ Lines=$(cat $File)
 RPM=$1
 
 # FORMAT FOR REGEXP = vcg-iid-simulator-1.75.1-425.el7.x86_64.rpm 
+# FORMAT FOR REGEXP = vcg-iid-simulator-((VERSION)).el7.x86_64.rpm
+
+#regex='-(([[:digit:]]+)\.([[:digit:]]+)\.([[:digit:]]+))\-'
+
+regex='-(([[:digit:]]+)\.([[:digit:]]+)\.([[:digit:]]+)\-([[:digit:]]+))\.'
+
+[[ "$RPM" =~ $regex ]]
+
+echo "${BASH_REMATCH[1]}"
+echo "${BASH_REMATCH[2]}"
+echo "${BASH_REMATCH[3]}"
+echo "${BASH_REMATCH[4]}"
+echo "${BASH_REMATCH[5]}"
+
+##[[ "$RPM" =~ $regex ]]
+
 # FORMAT FOR REGEXP = vcg-iid-simulator-((VERSION)).el7.x86_64.rpm 
 # Comment to test GIT
  
