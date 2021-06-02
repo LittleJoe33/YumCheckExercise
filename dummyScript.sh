@@ -44,5 +44,6 @@ for Line in $Lines
             echo "$Line" >> downgrades.txt 
         else
             echo "Error recognising version. Expected format is ""vcg-iid-simulator-xxx.xxx.xxx-xxx.el7.x86_64.rpm"""
+            exit
         fi
     done
